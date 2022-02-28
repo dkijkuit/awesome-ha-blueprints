@@ -39,7 +39,8 @@ blueprint:
       selector:
         select:
           options:
-            - Ecodim Zigbee 4 button wall switch - black
+            - ECODIM 4-button wall switch ED-10012/ED-10013
+            - ECODIM 4-button wall switch ED-10012/ED-10013 (#2)
             - IKEA E1524/E1810 TRÅDFRI Wireless 5-Button Remote
             - IKEA E1743 TRÅDFRI On/Off Switch & Dimmer
             - IKEA E1743 TRÅDFRI On/Off Switch & Dimmer (#2)
@@ -167,7 +168,14 @@ variables:
   controller_model: !input controller_model
   # supported controllers and mappings
   controller_mapping:
-    Ecodim Zigbee 4 button wall switch - black:
+    ECODIM 4-button wall switch ED-10012/ED-10013:
+      turn_on: button_1_short
+      turn_off: button_2_short
+      brightness_up: button_3_short
+      brightness_up_repeat: button_3_long
+      brightness_down: button_4_short      
+      brightness_down_repeat: button_4_long
+    ECODIM 4-button wall switch ED-10012/ED-10013 (#2):
       turn_on: button_1_short
       brightness_up_repeat: button_1_long
       turn_off: button_2_short
