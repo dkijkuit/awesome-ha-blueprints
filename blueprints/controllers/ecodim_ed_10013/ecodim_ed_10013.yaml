@@ -25,7 +25,15 @@ blueprint:
       selector:
         select:
           options:
+            - deCONZ
+            - ZHA
             - Zigbee2MQTT
+    controller_device:
+      name: (deCONZ, ZHA) Controller Device
+      description: The controller device to use for the automation. Choose a value only if the remote is integrated with deCONZ, ZHA.
+      default: ''
+      selector:
+        device:
     controller_entity:
       name: (Zigbee2MQTT) Controller Entity
       description: The action sensor of the controller to use for the automation. Choose a value only if the remote is integrated with Zigbee2MQTT.
@@ -218,6 +226,32 @@ variables:
   integration_id: '{{ integration | lower }}'
   # mapping between actions and integrations
   actions_mapping:
+    deconz:
+      button_1_short: ['1002']
+      button_1_long: ['1001']
+      button_1_release: ['1003']
+      button_2_short: ['2002']
+      button_2_long: ['2001']
+      button_2_release: ['2003']
+      button_3_short: ['3002']
+      button_3_long: ['3001']
+      button_3_release: ['3003']
+      button_4_short: ['4002']
+      button_4_long: ['4001']
+      button_4_release: ['4003']
+    zha:
+      button_1_short: [1_single]
+      button_1_long: [1_long press]
+      button_1_release: [1_release]
+      button_2_short: [2_single]
+      button_2_long: [2_long press]
+      button_2_release: [2_release]
+      button_3_short: [3_single]
+      button_3_long: [3_long press]
+      button_3_release: [3_release]
+      button_4_short: [4_single]
+      button_4_long: [4_long press]
+      button_4_release: [4_release]
     zigbee2mqtt:
       button_1_short: [on_1]
       button_1_long: [brightness_move_up_1]
