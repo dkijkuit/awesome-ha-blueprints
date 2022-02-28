@@ -85,6 +85,43 @@ blueprint:
       default: []
       selector:
         action:
+
+    action_button_3_short:
+      name: (Optional) Button 3 short press
+      description: Action to run on short button 3 press.
+      default: []
+      selector:
+        action:
+    action_button_3_long:
+      name: (Optional) Button 3 long press
+      description: Action to run on long button 3 press.
+      default: []
+      selector:
+        action:
+    action_button_3_release:
+      name: (Optional) Button 3 release
+      description: Action to run on button 3 release after long press.
+      default: []
+      selector:
+        action:
+    action_button_4_short:
+      name: (Optional) Button 4 short press
+      description: Action to run on short button 4 press.
+      default: []
+      selector:
+        action:
+    action_button_4_long:
+      name: (Optional) Button 4 long press
+      description: Action to run on long button 4 press.
+      default: []
+      selector:
+        action:
+    action_button_4_release:
+      name: (Optional) Button 4 release
+      description: Action to run on button 4 release after long press.
+      default: []
+      selector:
+        action:
     # inputs for looping custom actions on long button press events until the corresponding release event is received
     button_1_long_loop:
       name: (Optional) Button 1 long press - loop until release
